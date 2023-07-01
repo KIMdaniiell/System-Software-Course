@@ -1,0 +1,2 @@
+libsolution.so: solution.c solution.h
+	gcc solution.c -shared -o libsolution.so -fPIC
