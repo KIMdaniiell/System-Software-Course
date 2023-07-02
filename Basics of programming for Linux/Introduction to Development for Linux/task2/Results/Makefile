@@ -1,2 +1,2 @@
-exe: solution.c
-	gcc solution.c -ldl -o exe
+solution: solution.c
+	gcc solution.c -ldl -o solution
