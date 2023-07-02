@@ -1,2 +1,2 @@
 solution: solution.c
-	gcc solution.c -ldl -o solution
+	gcc solution.c -ldl -o solution -Wl,-rpath,. 
