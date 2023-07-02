@@ -13,10 +13,10 @@
       - тип (*d_type*)
 
 ## Операции связанные с директориями:
-  Открытие:
-    *DIR* opendir(const char * dir_name);*  - по имени
-    *DIR* fdopendir(int file_descriptor);*  - по файловому дескриптору
-  Итерация по содержимому:
-    *struct dirent* readdir(DIR* dir);*
-  Закрытие:
-    int closedir(DIR* );
+  - Открытие:
+    - *DIR* opendir(const char * dir_name);*  - по имени
+    - *DIR* fdopendir(int file_descriptor);*  - по файловому дескриптору
+  - Итерация по содержимому:
+    - *struct dirent* readdir(DIR* dir);*
+  - Закрытие:
+    - int closedir(DIR* );
