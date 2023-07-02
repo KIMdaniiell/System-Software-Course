@@ -23,9 +23,9 @@ bool init_lib(const char* lib_name, const char* func_name ) {
 	return true;
 }
 
-void main(int args_count, char** arg_values) {
+int main(int args_count, char** arg_values) {
 	if (args_count != 4) {
-		return;
+		return 1;
 	}
 
 	char* lib_name = *++arg_values;
@@ -33,12 +33,12 @@ void main(int args_count, char** arg_values) {
 	int func_arg = atoi(*++arg_values);
 	
 	if (!init_lib(lib_name, func_name)) {
-		return;
+		return 1;
 	}
 
 	printf("%d\n", plugin_function(func_arg));
 
-	return;
+	return 0;
 }
 
 
