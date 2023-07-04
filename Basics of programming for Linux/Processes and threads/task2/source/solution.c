@@ -17,8 +17,6 @@ int read_file(const char* path, char buffer[]);
 
 int get_next_line(char** text_ptr, char* line_buffer);
 
-int ls_dir(char* path); 
-
 bool string_is_number(char* string);
 
 int get_proc_info(char* path, char* parameter, char* value) {
@@ -36,7 +34,7 @@ int get_proc_info(char* path, char* parameter, char* value) {
 		char key_buf[BUFFER_SIZE + 1];
 		char value_buf[BUFFER_SIZE + 1];
 
-		int result = get_next_line(&text_ptr, line_buf);
+		get_next_line(&text_ptr, line_buf);
 		
 		parse_line(line_buf, key_buf, value_buf);
 		
@@ -81,7 +79,8 @@ int main() {
 
 
 bool string_is_number (char * string) {
-	for (int i = 0; i < strlen(string); i++) {
+	int i;
+	for (i = 0; i < strlen(string); i++) {
 		if (string[i] < '0' || string[i] > '9') {
 			return false;
 		}
@@ -89,19 +88,6 @@ bool string_is_number (char * string) {
 
 
 	return true;
-}
-
-int ls_dir(char* path) {
-	DIR* dir = opendir(path);
-	
-	struct dirent* dirent;
-        while (NULL != (dirent = readdir(dir))) {
-		if (dirent->d_type == DT_DIR) {
-			printf("d %s\n", dirent->d_name);
-		} else {
-			printf("- %s\n", dirent->d_name);
-		}
-	}
 }
 
 int get_next_line (char** text_ptr, char* line_buffer) {
