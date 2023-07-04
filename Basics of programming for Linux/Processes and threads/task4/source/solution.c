@@ -47,38 +47,57 @@ int get_proc_info(char* path, char* parameter, char* value) {
 	return 1;
 }
 
-int main(int argc, char** argv) {
+int count_children(char* pid_value) {
 	char text_buffer [BUFFER_SIZE + 1];
-	if (argc != 2) 
-		return 1;
 
 	char path[BUFFER_SIZE+1];
 	strcpy(path, PATH);
-	strcat(path, argv[1]);
+	strcat(path, pid_value);
 	strcat(path, "/task/");
-	strcat(path, argv[1]);
+	strcat(path, pid_value);
 	strcat(path, "/children");
 						
 	int file_descriptor = open(path, O_RDONLY);
 	read(file_descriptor, text_buffer, BUFFER_SIZE);
 
 
-	int count = 1;
+	int count = 0;
 	int i;
 	bool was_space = true;
+
+	char pid_buffer[BUFFER_SIZE + 1];
+	int pid_buffer_index = 0;
+
+	
+	printf("%s\n", text_buffer);
+
 	for (i = 0; i < strlen(text_buffer); i++) {
 		if (text_buffer[i] != ' ') {
+			pid_buffer[pid_buffer_index++] = text_buffer[i];
+
 			if (was_space)
 				count++;
 			was_space = false;
 		} else {
+			pid_buffer[pid_buffer_index] = '\0';
+			//printf("[%s]\n", pid_buffer);
+
+			count += count_children(pid_buffer);
+
+			pid_buffer_index = 0;
 			was_space = true;
 		}
 	}
+	return count;
+}
 
-	printf("%d\n", count);
+int main(int argc, char** argv) {
+	if (argc != 2) 
+		return 1;
+	int count = 1;
+	count += count_children(argv[1]);
 
-	return 0;
+	printf("Total: %d\n", count);
 }
 
 

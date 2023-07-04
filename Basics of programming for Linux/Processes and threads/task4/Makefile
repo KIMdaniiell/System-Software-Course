@@ -8,7 +8,7 @@ $(BUILD_DIR)/solution: $(SOURCE_DIR)/solution.c
 	gcc $(SOURCE_DIR)/solution.c -o $(BUILD_DIR)/solution
 
 run: $(BUILD_DIR)/solution
-	./$(BUILD_DIR)/solution 1639
+	./$(BUILD_DIR)/solution 1
 
 clean:
 	rm ./$(BUILD_DIR)/*
