@@ -68,9 +68,6 @@ int count_children(char* pid_value) {
 	char pid_buffer[BUFFER_SIZE + 1];
 	int pid_buffer_index = 0;
 
-	
-	printf("%s\n", text_buffer);
-
 	for (i = 0; i < strlen(text_buffer); i++) {
 		if (text_buffer[i] != ' ') {
 			pid_buffer[pid_buffer_index++] = text_buffer[i];
@@ -97,7 +94,7 @@ int main(int argc, char** argv) {
 	int count = 1;
 	count += count_children(argv[1]);
 
-	printf("Total: %d\n", count);
+	printf("%d\n", count);
 }
 
 
