@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 	
 	int shmid1 = atoi(argv[1]);
 	int shmid2 = atoi(argv[2]);
-	printf("%d %d\n", shmid1, shmid2);
+	//printf("%d %d\n", shmid1, shmid2);
 
 	int * reg_ptr1 = NULL;
 	int * reg_ptr2 = NULL;
