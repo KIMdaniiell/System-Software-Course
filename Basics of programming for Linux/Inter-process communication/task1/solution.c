@@ -8,7 +8,7 @@
 
 void make_a_line_command(char* command_name, char* command_param, char* buffer, bool in_current_dir);
 
-int execute_util(char* command_line, char* buffer);
+int execute_util(char* command_line);
 
 int main(int argc, char** argv) {
 	if (argc != 3)
@@ -19,33 +19,35 @@ int main(int argc, char** argv) {
 	//printf("Calling [%s] with param [%s]\n", uname, uparam);
 
 	char command_buffer[BUFFER_SIZE];
-	make_a_line_command(uname, uparam, command_buffer, true);
+	make_a_line_command(uname, uparam, command_buffer, false);
 	//printf("The line is [%s]\n", command_buffer);
 
-
-	char read_buffer[BUFFER_SIZE + 1];
-	execute_util(command_buffer, read_buffer);
-
-	int count = 0;
-	for (int i = 0; i < strlen(read_buffer); i++) {
-		if (read_buffer[i] == '0')
-			count++;
-	}
-
+	int count = execute_util(command_buffer);
+	
 	printf("%d\n", count);
 	return 0;
 }
 
-int execute_util(char* command_line, char* buffer) {
+int execute_util(char* command_line) {
 	FILE* pipe_file = popen(command_line, "r");
+	char buffer [BUFFER_SIZE + 1];
 
 	if (NULL == pipe_file)
-		return 1;
+		return -1;
 
-	int c = fread(buffer, sizeof(char), BUFFER_SIZE, pipe_file);
-	buffer[c] = '\0';
+	int c;
+	int i;
+	int count = 0;
+       	while ((c = fread(buffer, sizeof(char), BUFFER_SIZE, pipe_file)) != 0) {
+		buffer[c] = '\0';
+		for (i = 0; i < strlen(buffer); i++) {
+			if (buffer[i] == '0')
+				count++;
+		}
+	}
+
 	fclose(pipe_file);
-	return 0;
+	return count;
 }
 
 void make_a_line_command(char* command_name, char* command_param, char* buffer, bool in_current_dir) {
