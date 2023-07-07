@@ -1,10 +1,7 @@
-.PHONY: run test
+.PHONY: test
 
-exe: solution.c
-	gcc solution.c -o exe
+solution: solution.c
+	gcc solution.c -o solution
 
-run: exe
-	./exe util_name util_param
-
-test: exe
-	./exe echo 00001000
+test: solution
+	./solution echo 00001000
