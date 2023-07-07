@@ -1,4 +1,4 @@
-# 4. Взаимодействие процессов (Interprocess communication)
+# 4. Взаимодействие процессов (Inter-process communication)
 
 ### Содержание:
 
