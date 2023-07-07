@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
 
 	int i;
 	for (i = 0; i < LIST_SIZE; i++) {
-		reg_ptr[i] = reg_ptr1[i] + reg_ptr2[2];
+		reg_ptr[i] = reg_ptr1[i] + reg_ptr2[i];
 	}
 
 	shmdt(reg_ptr1);
