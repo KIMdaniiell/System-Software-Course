@@ -71,10 +71,13 @@ void server(int port) {
 		printf("%s\n", buffer);
 	}*/
 
-	while (0 != strcmp(buffer, "OFF\n")) {
+	for (;;) {
 		int c = recvfrom (socket_fd, buffer, BSIZE, 0, NULL, NULL);
 		buffer[c] = '\0';
-		printf("%s\n", buffer);
+		if ( 0 != strcmp (buffer, "OFF\n"))
+			printf("%s\n", buffer);
+		else 
+			break;
 	}
 
 	return;
