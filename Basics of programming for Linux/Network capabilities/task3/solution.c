@@ -10,11 +10,11 @@
 #define BSIZE 10000
 
 void swap(char* buffer, int a, int b) {
-	printf("[swap] [%c <-> %c] ", buffer[a], buffer[b]);
+	//printf("[swap] [%c <-> %c] ", buffer[a], buffer[b]);
 	char temp = buffer[a];
 	buffer[a] = buffer[b];
 	buffer[b] = temp;
-	printf("[%c <-> %c]\n", buffer[a], buffer[b]);
+	//printf("[%c <-> %c]\n", buffer[a], buffer[b]);
 	return;
 }
 
