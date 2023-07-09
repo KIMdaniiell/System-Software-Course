@@ -25,7 +25,7 @@ void sort_string(char* buffer) {
 
 	for (i = 0; i < len; i++) {
 		for (j = i+1; j < len; j++) {
-			if (buffer[i] > buffer[j])
+			if (buffer[i] < buffer[j])
 				swap(buffer, i, j);
 		}
 	}
