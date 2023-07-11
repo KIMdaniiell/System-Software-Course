@@ -1,8 +1,8 @@
 # Программа курса:
 1. Вводная информация о Linux (Introduction about Linux)
-2. Первые шаги в изучении интерфейса командной строки (Сommand line interface)
-3. Раскрытие команд командной оболочкой (Сommand shell)
-4. Программные каналы и команды (Program streams and commands)
+2. [Первые шаги в изучении интерфейса командной строки (Сommand line interface)](https://github.com/KIMdaniiell/System-Software-Course/tree/main/Linux%20Basics/%D0%A1ommand%20line%20interface)
+3. [Раскрытие команд командной оболочкой (Сommand shell)](https://github.com/KIMdaniiell/System-Software-Course/tree/main/Linux%20Basics/%D0%A1ommand%20shell)
+4. [Программные каналы и команды (Program channels and commands)](https://github.com/KIMdaniiell/System-Software-Course/tree/main/Linux%20Basics/Program%20channels%20and%20commands)
 5. Текстовый редактор vi (Vi Text Editor)
 6. Сценарии (Scenarios)
 7. Управление локальными учетными записями пользователей (Managing local user accounts)
