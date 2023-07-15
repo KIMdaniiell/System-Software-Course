@@ -6,12 +6,12 @@ This course is a combination of the following online courses:
 1. Основы программирования для Linux (Basics of programming for Linux)
    + [[Stepik link]](https://stepik.org/course/548)
    + [[Repo link]](https://github.com/KIMdaniiell/System-Software-Course/tree/main/Basics%20of%20programming%20for%20Linux)
-2. [Основы Linux (Linux Basics)](https://stepik.org/course/762)
+2. Основы Linux (Linux Basics)
    + [[Stepik link]](https://stepik.org/course/762)
    + [[Repo link]](https://github.com/KIMdaniiell/System-Software-Course/tree/main/Linux%20Basics)
-3. [Регулярные выражения в Python (Regular expressions in Python)](https://stepik.org/course/107335)
+3. Регулярные выражения в Python (Regular expressions in Python)
    + [[Stepik link]]
    + [[Repo link]]
-4. [Операционные системы](https://stepik.org/course/1780)
+4. Операционные системы
    + [[Stepik link]]
    + [[Repo link]]
