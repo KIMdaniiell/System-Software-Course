@@ -10,8 +10,8 @@ This course is a combination of the following online courses:
    + [[Stepik link]](https://stepik.org/course/762)
    + [[Repo link]](https://github.com/KIMdaniiell/System-Software-Course/tree/main/Linux%20Basics)
 3. Регулярные выражения в Python (Regular expressions in Python)
-   + [[Stepik link]]
-   + [[Repo link]]
+   + [[Stepik link]](https://stepik.org/course/107335/)
+   + [[Repo link]](https://github.com/KIMdaniiell/System-Software-Course/tree/main/Regular%20expressions%20in%20Python)
 4. Операционные системы
-   + [[Stepik link]]
+   + [[Stepik link]](https://stepik.org/course/1780/)
    + [[Repo link]]
