@@ -14,7 +14,7 @@
 + [Задания](https://github.com/KIMdaniiell/System-Software-Course/blob/main/Regular%20expressions%20in%20Python/Regex%20%26%20syntax/Tasks/2.3.py)
 
 2.4 Где проверять регулярные выражения?
-+ [Конспект] (https://github.com/KIMdaniiell/System-Software-Course/blob/main/Regular%20expressions%20in%20Python/Regex%20%26%20syntax/2.4%20notes.md)
++ [Конспект](https://github.com/KIMdaniiell/System-Software-Course/blob/main/Regular%20expressions%20in%20Python/Regex%20%26%20syntax/2.4%20notes.md)
   
 2.5 Знакомство с регулярными выражениями
 + [Конспект](https://github.com/KIMdaniiell/System-Software-Course/blob/main/Regular%20expressions%20in%20Python/Regex%20%26%20syntax/2.5%20notes.md)
