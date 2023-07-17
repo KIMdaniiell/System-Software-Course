@@ -1,0 +1,5 @@
+regex1 = r"(?P<re1>\d{3})(?P=re1)"
+regex2 = r"\b(?P<re2>[а-яё]+)-?(?P=re2)\b"
+regex3 = r"([a-zA-Zа-яА-ЯёЁ])\1"
+regex4 = r"([0-9]{2})\1"
+regex5 = r"^(<)?if(?(1)>|)$"
